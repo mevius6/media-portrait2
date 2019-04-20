@@ -47,17 +47,21 @@ a {
 }
 
 ::selection {
-    background-color: blueviolet;
-    color: white;
+    background-color: transparent;
+    color: inherit;
 }
 
 @font-face {
     font-family: CSTMX-3-VF;
     src: url(/fonts/CSTMXprmntl03-VF.woff2) format("woff2-variations");
-    font-weight: normal;
-    font-style: normal;
     font-stretch: normal;
-    display: Fallback;
+    font-style: normal;
+    font-weight: normal;
+    font-display: fallback;
+}
+
+:root {
+    font-size: 16px;
 }
 
 body {
@@ -65,7 +69,23 @@ body {
     --color-fg: hsl(0, 0%, 98.4%);
     --color-bd: hsl(0, 0%, 1.2%);
     min-height: 100vh;
+    background: var(--color-bg);
     font-family: sans-serif;
     font-weight: 400;
     line-height: 1.45;
+    color: var(--color-bd);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+.grid {
+    position: static;
+    display: grid;
+    grid:
+        "hd" minmax(100vh, 1fr)
+        "bd" auto
+        "img"
+        / 1fr;
+    grid-gap: calc(1rem + 1.6%);
 }
