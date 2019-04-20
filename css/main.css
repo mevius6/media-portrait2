@@ -87,44 +87,43 @@ a {
         font-size: 21.25px;
     }
 }
-
 /*
 .c-heading {
-    --growth-factor: calc( 1.5 * 1vw );
+    --growth-factor: calc(1.5 * 1vw);
     font-size: 2rem;
-    font-size: calc( 2rem + var(--growth-factor) );
-  }
-  @media (min-width: 800px) {
+    font-size: calc(2rem + var(--growth-factor));
+}
+@media (min-width: 800px) {
     .c-heading {
-      --growth-factor: calc( 800px * ( (1.5 / 100) ) );
+        --growth-factor: calc(800px * ((1.5 / 100)));
     }
-  }
-  
-  .c-dek {
-    --growth-factor: calc( 1 * 1vw );
+}
+
+.c-dek {
+    --growth-factor: calc(1 * 1vw);
     font-size: 1.35rem;
-    font-size: calc( 1.35rem + var(--growth-factor) );
-  }
-  @media (min-width: 800px) {
+    font-size: calc(1.35rem + var(--growth-factor));
+}
+@media (min-width: 800px) {
     .c-dek {
-      --growth-factor: calc( 800px * ( (1 / 100) ) );
+        --growth-factor: calc(800px * ((1 / 100)));
     }
-  }
-  
-  .c-copy {
-    --growth-factor: calc( 0.5 * 1vw );
+}
+
+.c-copy {
+    --growth-factor: calc(0.5 * 1vw);
     font-size: 1rem;
-    font-size: calc( 1rem + var(--growth-factor) );
-  }
-  @media (min-width: 800px) {
+    font-size: calc(1rem + var(--growth-factor));
+}
+@media (min-width: 800px) {
     .c-copy {
-      --growth-factor: calc( 800px * ( (0.5 / 100) ) );
+        --growth-factor: calc(800px * ((0.5 / 100)));
     }
-  }
-  
-  body {
+} 
+
+body {
     line-height: 1.35;
-  } */
+} */
 
 body {
     --color-bg: hsl(0, 0%, 98.4%);
