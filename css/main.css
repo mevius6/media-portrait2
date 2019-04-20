@@ -193,8 +193,8 @@ body {
     height: 100%; */
     background-position: 50%;
     background-repeat: no-repeat;
-    background-size: 90%;
-    background-color: var(--color-hl);
+    background-size: 100%;
+    /* background-color: var(--color-hl); */
 }
 
 .grid__item-text {
