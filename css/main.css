@@ -1,0 +1,36 @@
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+article,
+section,
+header,
+footer,
+main {
+    display: block;
+}
+img,
+svg {
+    vertical-align: middle;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-style: none;
+}
+body {
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+}
