@@ -1,13 +1,17 @@
 html {
+    font-size: 1em;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 article,
 section,
 header,
-footer,
-main {
+main,
+footer {
     display: block;
 }
 img,
@@ -33,4 +37,25 @@ a {
     text-decoration: none;
     color: inherit;
     background-color: transparent;
+}
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+::selection {
+    background-color:;
+    color: white;
+}
+
+@font-face {
+    font-family: CSTMX-3-VF;
+    src: url(/fonts/CSTMXprmntl03-VF.woff2) format("woff2-variations");
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    display: Fallback;
 }
