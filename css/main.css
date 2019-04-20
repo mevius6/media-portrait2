@@ -185,24 +185,25 @@ body {
 
 .grid__item-img {
     grid-area: img;
+    min-height: 100vh;
+    place-items: center;
     /*
     position: relative;
     width: 100%;
     height: 100%; */
     background-position: 50%;
     background-repeat: no-repeat;
-    background-size: 80%;
+    background-size: 90%;
     background-color: var(--color-hl);
 }
 
 .grid__item-text {
     grid-area: bd;
-    padding: 0 var(--spacing);
-
+    /*
     display: flex;
     flex-flow: column;
     justify-content: center;
-
+    */
     border-width: 1px;
     border-color: var(--color-hl);
     border-style: solid;
@@ -223,6 +224,10 @@ body {
         .grid__item-img {
             width: auto;
             margin: 0;
+        }
+
+        .grid__item-text {
+            padding: 0 var(--spacing);
         }
 
         .grid::after {
