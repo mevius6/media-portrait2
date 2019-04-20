@@ -47,7 +47,7 @@ a {
 }
 
 ::selection {
-    background-color:;
+    background-color: blueviolet;
     color: white;
 }
 
@@ -58,4 +58,14 @@ a {
     font-style: normal;
     font-stretch: normal;
     display: Fallback;
+}
+
+body {
+    --color-bg: hsl(0, 0%, 100%);
+    --color-fg: hsl(0, 0%, 98.4%);
+    --color-bd: hsl(0, 0%, 1.2%);
+    min-height: 100vh;
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 1.45;
 }
