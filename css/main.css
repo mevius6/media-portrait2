@@ -1,5 +1,5 @@
 html {
-    font-size: 1em;
+    /* font-size: 1em; */
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -32,6 +32,10 @@ h1 {
     font-size: 2em;
     margin: 0.67em 0;
 }
+h1,
+h2 {
+    font-weight: 400;
+}
 a {
     display: inline-block;
     text-decoration: none;
@@ -60,17 +64,80 @@ a {
     font-display: fallback;
 }
 
-:root {
-    font-size: 16px;
+@font-face {
+    font-family: Proto Grotesk;
+    src: url(/fonts/ProtoGrotesk-Light.woff) format("woff");
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: normal;
+    font-display: fallback;
 }
 
+:root {
+    --min-fs: 16px;
+    font-size: var(--min-fs);
+}
+@media (min-width: 320px) {
+    :root {
+        font-size: 5vw;
+    }
+}
+@media (min-width: 425px) {
+    :root {
+        font-size: 21.25px;
+    }
+}
+
+/*
+.c-heading {
+    --growth-factor: calc( 1.5 * 1vw );
+    font-size: 2rem;
+    font-size: calc( 2rem + var(--growth-factor) );
+  }
+  @media (min-width: 800px) {
+    .c-heading {
+      --growth-factor: calc( 800px * ( (1.5 / 100) ) );
+    }
+  }
+  
+  .c-dek {
+    --growth-factor: calc( 1 * 1vw );
+    font-size: 1.35rem;
+    font-size: calc( 1.35rem + var(--growth-factor) );
+  }
+  @media (min-width: 800px) {
+    .c-dek {
+      --growth-factor: calc( 800px * ( (1 / 100) ) );
+    }
+  }
+  
+  .c-copy {
+    --growth-factor: calc( 0.5 * 1vw );
+    font-size: 1rem;
+    font-size: calc( 1rem + var(--growth-factor) );
+  }
+  @media (min-width: 800px) {
+    .c-copy {
+      --growth-factor: calc( 800px * ( (0.5 / 100) ) );
+    }
+  }
+  
+  body {
+    line-height: 1.35;
+  } */
+
 body {
-    --color-bg: hsl(0, 0%, 100%);
+    --color-bg: hsl(0, 0%, 98.4%);
     --color-fg: hsl(0, 0%, 98.4%);
-    --color-bd: hsl(0, 0%, 1.2%);
+    --color-bd: hsl(0, 0%, 13.3%);
+    --color-hl: aquamarine;
+    --fs-h1: 5.653rem;
+    --fs-h2: 2.827em;
+    --col-max-w: 670px;
+    --spacing: 2rem;
     min-height: 100vh;
     background: var(--color-bg);
-    font-family: sans-serif;
+    font-family: "Proto Grotesk", sans-serif;
     font-weight: 400;
     line-height: 1.45;
     color: var(--color-bd);
@@ -79,13 +146,101 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+.paragraph {
+    margin-bottom: 1.25em;
+}
+
+.heading {
+    margin: 2.75rem 0 1rem;
+    font-family: "CSTMX-3-VF";
+    font-variation-settings: "wght" 400;
+    font-size: var(--fs-h2);
+    line-height: 1.15;
+
+    -webkit-transform: translateZ(1px);
+    -ms-transform: translateZ(1px);
+    transform: translateZ(1px);
+    -webkit-transition: font-variation-settings 1.5s, opacity 1.5s,
+        -webkit-transform 1.5s;
+    -o-transition: font-variation-settings 1.5s, opacity 1.5s, transform 1.5s;
+    transition: font-variation-settings 1.5s, opacity 1.5s, transform 1.5s;
+}
+.heading.in-view {
+    font-variation-settings: "wght" 1000;
+    -webkit-transform: translateZ(1px);
+    -ms-transform: translateZ(1px);
+    transform: translateZ(1px);
+}
+
 .grid {
     position: static;
+    max-width: 90vw;
+    margin: 0 auto;
     display: grid;
     grid:
-        "hd" minmax(100vh, 1fr)
         "bd" auto
         "img"
         / 1fr;
-    grid-gap: calc(1rem + 1.6%);
+    grid-column-gap: var(--spacing);
+}
+
+.grid__item-img {
+    grid-area: img;
+    /*
+    position: relative;
+    width: 100%;
+    height: 100%; */
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-color: var(--color-hl);
+}
+
+.grid__item-text {
+    grid-area: bd;
+    padding: 0 var(--spacing);
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    border-width: 1px;
+    border-color: var(--color-hl);
+    border-style: solid;
+}
+
+@media screen and (min-width: 35em) {
+    .grid::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    @supports (display: grid) {
+        .grid > * {
+            margin: 0;
+        }
+
+        .grid__item-img {
+            width: auto;
+            margin: 0;
+        }
+
+        .grid::after {
+            content: none;
+        }
+
+        .grid {
+            display: grid;
+            grid:
+                ". ." auto
+                / [bd] 1fr [img] 1fr;
+        }
+
+        .grid--flip {
+            grid:
+                ". ." auto
+                / [img] 1fr [bd] 1fr;
+        }
+    }
 }
