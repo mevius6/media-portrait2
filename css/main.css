@@ -146,6 +146,20 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+.page__loader {
+    width: 100%;
+    min-height: 100vh;
+    background: center / 25% no-repeat url(/img/loader.gif);
+}
+
+.page__footer {
+    width: 100%;
+    min-height: 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .paragraph {
     margin-bottom: 1.25em;
 }
