@@ -235,5 +235,9 @@ body {
                 ". ." auto
                 / [img] 1fr [bd] 1fr;
         }
+        
+        .paragraph {
+            margin-bottom: var(--spacing);
+        }
     }
 }
