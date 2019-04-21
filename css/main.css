@@ -209,13 +209,24 @@ body {
             margin: 0;
         }
 
+        .grid__item-img,
+        .grid__item-text {
+            border-color: var(--color-hl);
+        }
         .grid__item-img {
             width: auto;
             margin: 0;
+            border-width: 1px;
+            border-style: solid;
         }
 
         .grid__item-text {
             padding: 0 var(--spacing);
+            border-width: 0 1px;
+            border-style: solid;
+            /*
+            border-left-color: aquamarine;
+            border-right-color: aquamarine; */
         }
 
         .grid::after {
@@ -234,10 +245,6 @@ body {
             grid:
                 ". ." auto
                 / [img] 1fr [bd] 1fr;
-        }
-        
-        .paragraph {
-            margin-bottom: var(--spacing);
         }
     }
 }
