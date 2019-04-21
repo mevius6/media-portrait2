@@ -104,12 +104,19 @@ body {
     font-weight: 400;
     line-height: 1.45;
     color: var(--color-bd);
+    font-kerning: normal;
+    -moz-font-feature-settings: "kern";
+    -webkit-font-feature-settings: "kern";
+    font-feature-settings: "kern";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
+body.loading {
+    overflow: hidden;
+}
 
-.page__loader {
+.js .page__loader {
     width: 100%;
     min-height: 100vh;
     background: center / 25% no-repeat url(/img/loader.gif);
