@@ -116,7 +116,7 @@ body.loading {
     overflow: hidden;
 }
 
-.js .page__loader {
+.page__loader {
     width: 100%;
     min-height: 100vh;
     background: center / 25% no-repeat url(/img/loader.gif);

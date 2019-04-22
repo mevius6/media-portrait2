@@ -2,7 +2,6 @@
     const animateHeader = function(Header, ratio) {
         if (ratio > 0) {
             if (false && Header.tagName === "H2") {
-                Header.classList.add("in-view");
             } else {
                 Header.classList.add("in-view");
             }
@@ -24,10 +23,4 @@
         HeadersObserver.observe(Header);
         HeadersObserver.observe(Header.closest("article"));
     }
-
-    imagesLoaded(
-        document.querySelectorAll(".grid__item-img"),
-        { background: true },
-        () => document.body.classList.remove("loading")
-    );
 }
