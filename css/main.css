@@ -120,6 +120,24 @@ body.loading {
     width: 100%;
     min-height: 100vh;
     background: center / 25% no-repeat url(/img/loader.gif);
+    background-color: transparent;
+}
+
+.page__header {
+    width: 100vw;
+    height: 100vh;
+    background: center / 100% no-repeat url(/img/1.jpg);
+    background-attachment: fixed;
+    backdrop-filter: blur(2px);
+    backdrop-filter: brightness(60%);
+    backdrop-filter: contrast(40%);
+    backdrop-filter: drop-shadow(4px 4px 10px blue);
+    backdrop-filter: grayscale(30%);
+    backdrop-filter: hue-rotate(120deg);
+    backdrop-filter: invert(70%);
+    backdrop-filter: opacity(20%);
+    backdrop-filter: sepia(90%);
+    backdrop-filter: saturate(80%);
 }
 
 .page__footer {
