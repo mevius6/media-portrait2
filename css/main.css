@@ -93,7 +93,7 @@ body {
     --color-bg: hsl(0, 0%, 98.4%);
     --color-bd: hsl(0, 0%, 13.3%);
     --color-fg: hsl(120, 20%, 96.1%);
-    --color-hl: hsl(120, 20%, 50%); /* turquoise~aquamarine */
+    --color-hl: hsl(120, 20%, 50%);
     --fs-h1: 5.653rem;
     --fs-h2: 2.827em;
     --col-max-w: 670px;
