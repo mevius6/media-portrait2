@@ -1,0 +1,16 @@
+{
+  "lang": "ru-RU",
+  "dir": "ltr",
+  "short_name": "media-portrait-2",
+  "name": "Женя Зайцева | Интервью",
+  "description": "Фото и текст: Владимир Лесных",
+  "icons": [{
+    "src": "icon.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }],
+  "start_url": "/?utm_source=homescreen",
+  "display": "standalone",
+  "background_color": "#fbfbfb",
+  "theme_color": "#fbfbfb"
+}
