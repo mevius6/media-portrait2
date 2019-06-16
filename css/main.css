@@ -80,14 +80,13 @@ body.loading {
 .page__loader {
     width: 100%;
     min-height: 100vh;
-    background: center / 25% no-repeat url(/img/loader.gif);
-    background-color: transparent;
+    background: center / 50% no-repeat url(/img/loader.gif) transparent;
 }
 
 .page__header {
     width: 100vw;
     height: 100vh;
-    background: fixed center / cover no-repeat url(/img/1.jpg);
+    background: fixed left / 100% no-repeat url(/img/1.jpg);
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -153,6 +152,12 @@ body.loading {
         content: "";
         display: block;
         clear: both;
+    }
+
+    .page__loader {
+        width: 100%;
+        min-height: 100vh;
+        background: center / 25% no-repeat url(/img/loader.gif) transparent;
     }
 
     @supports (display: grid) {
