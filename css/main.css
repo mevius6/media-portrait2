@@ -86,7 +86,7 @@ body.loading {
 .page__header {
     width: 100vw;
     height: 100vh;
-    background: fixed left / 100vmax no-repeat url(/img/1.jpg);
+    background: fixed left / cover no-repeat url(/img/1.jpg);
     display: flex;
     flex-flow: column;
     align-items: center;
