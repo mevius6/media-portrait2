@@ -86,11 +86,16 @@ body.loading {
 .page__header {
     width: 100vw;
     height: 100vh;
-    background: fixed 90% / cover no-repeat url(/img/1.jpg);
+    /* background: fixed 90% / cover no-repeat url(/img/1.jpg); */
+    background-attachment: fixed;
+    background-image: url(/img/1.jpg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 250%;
     display: flex;
     flex-flow: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .page__footer {
@@ -158,6 +163,10 @@ body.loading {
         width: 100%;
         min-height: 100vh;
         background: center / 25% no-repeat url(/img/loader.gif) transparent;
+    }
+
+    .page__header {
+        background: fixed center / cover no-repeat url(/img/1.jpg);
     }
 
     @supports (display: grid) {
