@@ -83,6 +83,14 @@ body.loading {
     background: center / 50% no-repeat url(/img/loader.gif) transparent;
 }
 
+.page__header,
+.page__footer {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .page__header {
     width: 100vw;
     height: 100vh;
@@ -92,18 +100,11 @@ body.loading {
     background-position: top left;
     background-repeat: no-repeat;
     background-size: 270vw;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .page__footer {
     width: 100%;
     min-height: 7vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .paragraph {
