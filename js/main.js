@@ -23,8 +23,6 @@
         HeadersObserver.observe(Header);
         HeadersObserver.observe(Header.closest("article"));
     }
-    
-    const pageLoader = document.getElementById("pageLoader");
 
     const preloadImages = () => {
         return new Promise((resolve, reject) => {
@@ -34,6 +32,5 @@
 
     preloadImages().then(() => {
         document.body.classList.remove('loading');
-        pageLoader.classList.remove('loading');
     });
 }

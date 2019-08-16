@@ -78,15 +78,26 @@ body.loading {
 	overflow: hidden;
 }
 
-.page__loader {
-	display: none;
+.loading::before {
+	content: "";
+	position: fixed;
+	z-index: 100000;
+	top: 0;
+	left: 0;
 	width: 100%;
-	min-height: 100vh;
-	background: center / 50% no-repeat url(/img/loader.gif) transparent;
+	height: 100%;
+	background: var(--color-bg);
 }
 
-.page__loader.loading {
-	display: block
+.loading::after {
+	content: "";
+	position: fixed;
+	z-index: 100000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+	background: center / 70% no-repeat url(/img/loader.gif) transparent;
 }
 
 .page__header,
@@ -163,10 +174,8 @@ body.loading {
 		clear: both;
 	}
 
-	.page__loader {
-		width: 100%;
-		min-height: 100vh;
-		background: center / 25% no-repeat url(/img/loader.gif) transparent;
+	.loading::after {
+		background-size: 25%;
 	}
 
 	.page__header {
